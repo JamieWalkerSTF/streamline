@@ -1,6 +1,20 @@
-# Create T3 App
+# Streamline WP App
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+
+It uses Typesafe Nextjs, Auth.js, Prisma, Tailwind and TRPC.
+
+Todo:
+
+- Database Setup
+- Users Accounts
+- Business Accounts
+- Global Settings
+- stripe-checkout
+- Payments
+- CRUD Users
+- CRUD Websites
+- Darkmode
 
 ## What's next? How do I make an app with this?
 
