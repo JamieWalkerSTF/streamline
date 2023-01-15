@@ -5,7 +5,7 @@ import GoogleProvider from "next-auth/providers/google";
 // Prisma adapter for NextAuth, optional and can be removed
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 
-//import { env } from "../../../env/server.mjs";
+import { env } from "../../../env/server.mjs";
 import { prisma } from "../../../server/db";
 
 export const authOptions: NextAuthOptions = {
@@ -26,12 +26,12 @@ export const authOptions: NextAuthOptions = {
   },
   providers: [
     EmailProvider({
-      server: process.env.EMAIL_SERVER,
-      from: process.env.EMAIL_FROM,
+      server: env.EMAIL_SERVER,
+      from: env.EMAIL_FROM,
     }),
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      clientId: env.GOOGLE_CLIENT_ID,
+      clientSecret: env.GOOGLE_CLIENT_SECRET,
       // This forces Google to re-issue a Refresh Token - REMOVE THIS IN PRODUCTION
       authorization: {
         params: {
